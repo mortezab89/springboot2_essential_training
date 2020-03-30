@@ -9,7 +9,20 @@ server:
     key-alias: linkedin
     key-password: password
 ---
-spring:
-  profiles: test
 server:
   port: 9000
+
+#to tell hibernate not to generate data bcuz we are going to use our data.sql
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot2_essential_training
+    username: morteza
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+
+
