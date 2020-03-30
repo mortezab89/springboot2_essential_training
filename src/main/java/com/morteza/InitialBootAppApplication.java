@@ -21,5 +21,11 @@ public class InitialBootAppApplication {
             return  "hello worlds!";
 
         }
+
+        @GetMapping("/")
+        public String mainPage(){
+            return "Main page";
+        }
     }
+
 }
